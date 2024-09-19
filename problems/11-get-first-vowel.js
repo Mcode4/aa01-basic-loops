@@ -7,6 +7,20 @@ Vowels are the letters "a", "e", "i", "o", "u".
 */
 
 // Your code here 
+function getFirstVowel(str){
+    let vowels = 'aeiouAEIOU'
+
+    for(let i = 0; i < str.length; i++){
+        let curStr = str[i]
+        for(let j = 0; j < vowels.length; j++){
+            let curV = vowels[j]
+            if(curV === curStr){
+                return curStr
+            }
+        }
+    }
+    return null
+}
 
 // console.log(getFirstVowel('battery'));      // 'a'
 // console.log(getFirstVowel('tunnel'));       // 'u'

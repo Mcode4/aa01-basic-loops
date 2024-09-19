@@ -8,8 +8,30 @@ Vowels are the letters "a", "e", "i", "o", "u".
 */
 
 // Your code here 
+function reverb(str){
+    let vowels = 'aeiouAEIOU'
+    let newStr = str
 
-// console.log(reverb('running')); // runninging
+    if(str !== String(str)) return null
+
+    for(let i = str.length-1; i >= 0 ; i--){
+        console.log(i)
+
+        if(vowels.includes(str[i])){
+            console.log("Target found at:",i, " - ", str[i] )
+
+            for(let j = i; j< str.length; j++){
+                let curStr = str[j]
+                newStr += curStr
+            }
+            i = 0
+        }
+    }
+    return newStr
+}
+
+
+console.log(reverb('running')); // runninging
 // console.log(reverb('FAMILY'));  // FAMILYILY
 // console.log(reverb('trash'));   // trashash
 // console.log(reverb('DISH'));    // DISHISH

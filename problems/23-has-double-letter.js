@@ -6,6 +6,18 @@ return null.
 */
 
 // Your code here 
+function hasDoubleLetter(str){
+    if (str !== String(str)) return null
+
+    for(let i = 1; i< str.length; i++){
+        let curStr = str[i]
+        let preStr = str[i-1]
+
+        if ( curStr === preStr) return true
+    }
+    return false
+}
+
 
 // console.log(hasDoubleLetter('deer')); // true
 // console.log(hasDoubleLetter('boot camp')); // true

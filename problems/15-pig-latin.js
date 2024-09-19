@@ -18,11 +18,43 @@ So the two rules for our version of Pig Latin are:
 
 function pigLatinWord(word) {
     // Your code here 
+    let vowels = 'aeiouAEIOU'
+    let newStr = ''
+    let addon = ''
+    let start = false
+
+    if (vowels.includes(word[0])){
+        for(let i = 0; i < word.length; i++){
+            newStr += word[i]
+        }
+        newStr += 'yay'
+    } 
+    else{
+        for(let i = 0; i < word.length; i++){
+            curWord = word[i]
+            if (vowels.includes(curWord) && !start){
+                newStr += curWord
+                start = true
+            }
+            else if (!start){
+                addon += curWord
+            } else{
+                newStr+= curWord
+            }
+        }
+        newStr += addon +'ay'
+    }
+    
+
+
+
+
+    return newStr
 };
 
 // console.log(pigLatinWord("apple")); //=> "appleyay"
 // console.log(pigLatinWord("eat")); //=> "eatyay"
-// console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
 // console.log(pigLatinWord("trash")); //=> "ashtray"
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

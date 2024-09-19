@@ -10,6 +10,18 @@ For example, since 64 = 8 * 8 and 144 = 12 * 12, 64 and 144 are perfect squares;
 */
 
 // Your code here 
+function isPerfectSquare(n){
+    let min = 1
+    let max = 999
+    for(let i = min; i <= max; i++){
+        let n1 = i
+        let n2 = i
+
+        if(n1 * n2 === n) return true
+    }
+    return false
+}
+
 
 // console.log(isPerfectSquare(1))     // true
 // console.log(isPerfectSquare(4))     // true

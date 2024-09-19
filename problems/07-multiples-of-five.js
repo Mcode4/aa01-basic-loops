@@ -5,8 +5,19 @@ number parameter that are multiples of 5.
 */
 
 // Your code here 
+function multiplesOfFive(n){
+    let count = 0
+    if(n === 0) return n
+    else {
+        for(let i = 0; i < n; i+= 5){
+            console.log(i)
+            count++
+        }
+    }
+    return count
+}
 
-// console.log(multiplesOfFive(20)); // => 4    // 0, 5, 10, 15
+console.log(multiplesOfFive(20)); // => 4    // 0, 5, 10, 15
 // console.log(multiplesOfFive(10)); // => 2    // 0, 5
 // console.log(multiplesOfFive(14)); // => 3    // 0, 5, 10
 // console.log(multiplesOfFive(21)); // => 5    // 0, 5, 10, 15, 20

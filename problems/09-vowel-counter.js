@@ -6,6 +6,21 @@ Vowels are the letters "a", "e", "i", "o", "u".
 */
 
 // Your code here 
+function countVowels(str){
+    let vowels = 'aeiouAEIOU'
+    let count = 0
+
+    for(let i = 0; i < str.length; i++){
+        let curStr = str[i]
+        for(let j = 0; j < vowels.length; j++){
+            let curV = vowels[j]
+            if(curV === curStr){
+                count++
+            }
+        }
+    }
+    return count
+}
 
 // console.log(countVowels("bootcamp")); // => 3
 // console.log(countVowels("apple"));    // => 2

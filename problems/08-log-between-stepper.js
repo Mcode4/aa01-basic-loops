@@ -10,6 +10,13 @@ return anything.
 */
 
 // Your code here 
+function logBetweenStepper(min, max, inv){
+    while(max >= min){
+        console.log(min)
+        min += inv
+    }
+}
+
 
 // logBetweenStepper(5, 9, 1);
 /* prints out:

@@ -7,6 +7,19 @@ Vowels are the letters "a", "e", "i", "o", "u".
 */
 
 // Your code here 
+function sillyString(word){
+    let vowels = 'aeiouAEIOU'
+    let newStr = ''
+
+    for(let i = 0; i < word.length; i++){
+        curStr = word[i]
+        newStr += curStr
+        if (vowels.includes(curStr)){
+            newStr += 'b' + curStr
+        }
+    }
+    return newStr
+}
 
 // console.log(sillyString('stop'));       // stobop
 // console.log(sillyString('that'));       // thabat

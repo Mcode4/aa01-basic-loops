@@ -5,6 +5,17 @@ more dots (.) than dashes (-).
 */
 
 // Your code here 
+function moreDotLessDash(str){
+    let dotCount = 0;
+    let dashCount = 0;
+    for(let i = 0; i< str.length; i++){
+        let curStr = str[i]
+        if(curStr === '.') dotCount++
+        if(curStr === '-') dashCount++
+    }
+    return dotCount > dashCount
+}
+
 
 // console.log(moreDotLessDash('2-D arrays are fun. I think.'));           // true
 // console.log(moreDotLessDash('Morse code is great.'));                   // true

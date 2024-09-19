@@ -6,6 +6,25 @@ sequence, we take the sum of the previous two numbers of the sequence.
 */
 
 // Your code here 
+function fib(n){
+    let num = 1
+    let sum = 0
+
+    for(let i = 0; i < n; i++){
+        // 1(1), 0+1(2), 1+1(3), 1+2(4), 2+3, 
+        nextNum = num+num
+
+        if (i <= 1){
+            sum = 1
+        } else{
+            let previousSum = sum
+            sum += num
+            num = previousSum
+        }
+    }
+    return sum
+}
+
 
 // console.log(fib(1));    // 1
 // console.log(fib(2));    // 1

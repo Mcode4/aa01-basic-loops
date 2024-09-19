@@ -7,6 +7,13 @@ high numbers.
 */
 
 // Your code here 
+function logBetween(start, end){
+    while (start<= end){
+        console.log(start)
+        start++
+    }
+}
+
 
 // logBetween(-1, 2);
 /* prints out:

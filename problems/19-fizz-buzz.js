@@ -4,6 +4,23 @@ Define a function fizzBuzz(max) that takes a number and prints every number from
 */
 
 // Your code here 
+function fizzBuzz(max){
+    let i = 0
+    while(i <= max){
+        if(i % 5 === 0 && i % 3 === 0){
+            i++
+        } else if (i % 5 === 0){
+            console.log(i)
+            i++
+        } else if (i % 3 === 0){
+            console.log(i)
+            i++
+        } else {
+            i++
+        }
+
+    }
+}
 
 // fizzBuzz(20); // prints out:
 /*
